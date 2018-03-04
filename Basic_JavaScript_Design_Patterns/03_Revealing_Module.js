@@ -6,9 +6,9 @@ var myRevealingModule = (function () {
     var privateVar = "Ben Cherry",
         publicVar = "Hey there!";
     function privateFunction() {
-        console.log( "Name:" + privateVar );
+        console.log("Name:" + privateVar);
     }
-    function publicSetName( strName ) {
+    function publicSetName(strName) {
         privateVar = strName;
     }
     function publicGetName() {
@@ -23,7 +23,7 @@ var myRevealingModule = (function () {
     };
 })();
 
-myRevealingModule.setName( "Paul Kinlan" );
+myRevealingModule.setName("Paul Kinlan");
 
 // === 2 ===
 
@@ -38,12 +38,12 @@ var myRevealingModule = (function () {
     function publicIncrement() {
         privateFunction();
     }
-    function publicGetCount(){
-      return privateCounter;
+    function publicGetCount() {
+        return privateCounter;
     }
     // Reveal public pointers to
     // private functions and properties
-   return {
+    return {
         start: publicFunction,
         increment: publicIncrement,
         count: publicGetCount
